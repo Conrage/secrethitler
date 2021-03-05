@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    background-color: rgb(44, 44, 44);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.text{
+    font-size: 24px;
+    color: rebeccapurple;
+}
+.usersList{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.header{
+    height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+}
+.body{
+    height: 50vh;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.loginHolder{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width:80vw;
+    box-shadow: inset 12px px 35px -35px rgba(190, 95, 245, 1);
+    height: 90vh;
+    border-left: 2px solid white;
+}
+.userBox{
+    color: white;
+    letter-spacing: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    width:130px;
+    min-width: 130px;
+    margin-right: 30px;
+    height: 130px;
+    border: 1px solid rgba(190, 95, 245, 1);
+    border-radius: 6px;
+}
+.input{
+    margin-top:50px;
+    margin-bottom: 100px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    color: white;
+    height: 50px;
+    text-indent: 30px;
+    font-size: 18px;
+    width: 90%;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-right: transparent;
+    border-bottom-right-radius: 0px;
+    transition: 0.3s;
+}
+.input:focus{
+    height: 50px;
+    border-color: rgb(164, 6, 255);
+    box-shadow: inset 12px -14px 35px -35px rgb(170, 23, 255);
+    border-top-left-radius: 25px;
+    border-top: 2px solid transparent;
+    border-right: transparent;
+}
+.input::placeholder{
+    color: rgb(75, 75, 75);
+}
+.button{
+    cursor: pointer;
+    width: 90%;
+    background-color: rgb(164, 6, 255);
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 0px 14px -3px rgb(164, 6, 255);
+    letter-spacing: 3px;
+    font-family: 'Noto Sans JP',sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    color: white;
+    height: 50px;
+}
+.button:hover{
+    box-shadow: 0px 0px 23px -3px rgb(164, 6, 255);
+}
+.inputLabel {
+    font-size: 9vw;
+    line-height: 9vw;
+    font-size: 28px;
+    font-family: 'Noto sans JP',sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    text-shadow: 0 0 1vw rgba(184, 6, 255, 0.8);
+  }
+  
