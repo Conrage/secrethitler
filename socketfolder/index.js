@@ -1,14 +1,14 @@
 const app = require('express')();
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
-const next = require('next');
+const io = require('socket.io')(server, {
+    cors: {
+      origin: '*',
+    }
+  });
 
-const dev = process.env.NODE_ENV != 'production';
-const nextApp = next({dev});
 
 const port = 5000;
 
-const nextHandler = nextApp.getRequestHandler();
 
 var usersArray = [];
 var gamesArray = [];
@@ -49,14 +49,11 @@ io.on('connect', socket => {
         io.emit(data.code+'Res', usersOnGame);
     })
 })
-nextApp.prepare().then(()=>{
+app.get('*',(req,res)=>{
+    return nextHandler(req,res)
+})
 
-    app.get('*',(req,res)=>{
-        return nextHandler(req,res)
-    })
-
-    server.listen(port, (error)=>{
-        if(error) throw new error
-        console.log('Listening on '+port)
-    })
+server.listen(port, (error)=>{
+    if(error) throw new error
+    console.log('Listening on '+port)
 })
