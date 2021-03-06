@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import React, { useState } from 'react';
 
 var socket = {};
-socket = io('http://localhost:5000');
+socket = io('https://damp-temple-32313.herokuapp.com/');
 
 function Home(){
     const [users, setUsers] = useState([]);

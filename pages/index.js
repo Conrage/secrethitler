@@ -4,7 +4,7 @@ import { userUpdate } from "../store/actions/users";
 import { useRouter } from 'next/router';
 var socket = {};
 
-socket = io('http://localhost:5000');
+socket = io('https://damp-temple-32313.herokuapp.com/');
 socket.on('welcome',(data)=>{
     console.log(data.message)
 })
