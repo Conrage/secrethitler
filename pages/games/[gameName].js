@@ -37,7 +37,7 @@ function Home(){
             </div>
           </div>
     }else{
-        router.push('/')
+        return <div>404</div>
     }
     
 }
