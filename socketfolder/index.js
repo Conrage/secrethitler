@@ -1,14 +1,16 @@
-const app = require('express')();
-const server = require('http').Server(app);
-const io = require('socket.io')(server, {
-    cors: {
-      origin: '*',
-    }
-  });
+const content = require('fs').readFileSync(__dirname + '/index.html', 'utf8');
 
+const httpServer = require('http').createServer((req, res) => {
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Content-Length', Buffer.byteLength(content));
+  res.end(content);
+});
 
-const port = 5000;
-
+const io = require('socket.io')(httpServer,{
+  cors:{
+    origin:'*',
+  }
+});
 
 var usersArray = [];
 var gamesArray = [];
@@ -49,11 +51,7 @@ io.on('connect', socket => {
         io.emit(data.code+'Res', usersOnGame);
     })
 })
-app.get('*',(req,res)=>{
-    return nextHandler(req,res)
-})
-
-server.listen(port, (error)=>{
-    if(error) throw new error
-    console.log('Listening on '+port)
-})
+const PORT = process.env.PORT || 3000;
+httpServer.listen(PORT, () => {
+  console.log('listening to '+PORT);
+});
