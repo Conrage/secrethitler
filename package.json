@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Conrad-C/secrethitler#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "next": "^10.0.7",
     "next-redux-wrapper": "^6.0.2",
     "nodemon": "^2.0.7",
