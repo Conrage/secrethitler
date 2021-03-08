@@ -46,10 +46,8 @@ const Game = ({}) => {
 
     //Functions
     const bigode = (tag) =>{
-        console.log(tag)
-        if(tag == 'Hitler'){
+        if(tag == 'Hitler' && player.tag != 'Liberal'){
             return <div className="bigode"></div>
-            
         }else{
             return null;
         }
