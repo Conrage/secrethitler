@@ -253,6 +253,17 @@ body{
 
 /* In-game */
 
+.select-card-president{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 60%;
+    background: #37423D;
+    box-shadow: 0px 0px 10000px 150px black;
+    position: absolute;
+}
 .game-body{
     width: 95vw;
     display: flex;
@@ -294,7 +305,6 @@ body{
     border:2px solid #B39C4D;
     border-radius: 10px;
     margin-right: 20px;
-    filter: opacity(0.8);
     transition: 0.3s;
     background-image: url('../assets/CardBacksideBuy.png');
     background-size: 100% 100%;
@@ -344,13 +354,9 @@ body{
     cursor: pointer;
 }
 
-.card-active{
-    filter: opacity(1);
-}
 .discard-cards{
     background-size: 100% 100%;
     background-image: url('../assets/CardBacksideDiscard.png');
-    filter: opacity(0.8);
     background-color:#b69f5371;
     height: 80%;
     border:2px solid #B39C4D;
